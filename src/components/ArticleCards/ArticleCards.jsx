@@ -1,11 +1,15 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardText, MDBIcon, MDBBtn} from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardText} from "mdbreact";
 const ArticleCards = () => {
   return (
     <MDBContainer>
-        <MDBRow className="mb-5"></MDBRow>
-        <MDBRow>
-            <MDBCol md="6" className="mb-r">
+        <MDBRow className="mb-5">
+            <MDBCol md="12" className="mb-r">
+                
+            </MDBCol>
+        </MDBRow>
+        <MDBRow className="mb-5">
+            <MDBCol md="12" className="mb-r">
                 <MDBCard narrow>
                     <h2 className='h2-responsive mt-5'>Mattonit</h2>
                     <p className='font-weight-bold blue-text'>Photographer | user</p>

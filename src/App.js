@@ -1,15 +1,10 @@
 import './App.css';
-import ArticleCards from './ArticleCards/ArticleCards';
-import MasterContainer from './Components/Container';
-import Registration from './Registration/Registration';
+import AuthContainer from './containers/AuthContainer';
 
 function App() {
   return (
     <div className="App">
-      <MasterContainer>
-        {/* <Registration />   */}
-        <ArticleCards />
-      </MasterContainer>
+      <AuthContainer />
     </div>
   );
 }
