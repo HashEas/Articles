@@ -1,34 +1,17 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardText} from "mdbreact";
-const ArticleCards = () => {
+import { MDBRow, MDBCol} from "mdbreact";
+import ArticleCard from './ArticleCard/ArticleCard';
+const ArticleCards = (props) => {
   return (
-    <MDBContainer>
-        <MDBRow className="mb-5">
-            <MDBCol md="12" className="mb-r">
-                
-            </MDBCol>
-        </MDBRow>
-        <MDBRow className="mb-5">
-            <MDBCol md="12" className="mb-r">
-                <MDBCard narrow>
-                    <h2 className='h2-responsive mt-5'>Mattonit</h2>
-                    <p className='font-weight-bold blue-text'>Photographer | user</p>
-                    <MDBCardBody cascade className='text-center' >
-                        <MDBCardText>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Voluptatibus, ex, recusandae. Facere modi sunt, quod quibusdam
-                            dignissimos neque rem nihil ratione est placeat vel, natus non
-                            quos laudantium veritatis sequi.Ut enim ad minima veniam, quis
-                            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-                            aliquid ex ea commodi.
-                        </MDBCardText>
-                        <hr />
-                        <button className="btn btn-primary waves-effect waves-light">Button</button>
-                    </MDBCardBody>
-                </MDBCard>
-            </MDBCol>
-        </MDBRow>
-    </MDBContainer>
+    Object.keys(props.articles).map((articleKey) => {
+        return (
+            <MDBRow key={articleKey} className="mb-5">
+                <MDBCol md="12" className="mb-r">
+                    <ArticleCard article={props.articles[articleKey]} />
+                </MDBCol>
+            </MDBRow>
+        );
+    })
   );
 }
 

@@ -10,12 +10,14 @@ import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import authReducer from '../src/store/reducers/authReducer';
+import authReducer from '../src/store/reducers/articlesReducer';
+import articlesReducer from '../src/store/reducers/articlesReducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    authState: authReducer
+    authState: authReducer,
+    articleState: articlesReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(
